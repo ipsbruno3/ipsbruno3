@@ -26,8 +26,8 @@ Pastebin: ipsBruno | Drakins
 ---
 
 ### 🧰 Tech & Metrics
-![Stars](https://img.shields.io/github/stars/ipsbruno?style=flat) ![TopLang](https://img.shields.io/github/languages/top/ipsbruno?style=flat) ![GPUs](https://img.shields.io/badge/GPU-5090-brightgreen)
-
+![Stars (multi)](https://img.shields.io/endpoint?url=https://ipsbruno3.github.io/ipsbruno/stars.json) ![Forks (multi)](https://img.shields.io/endpoint?url=https://ipxbruno3.github.io/ipsbruno/forks.json)
+v
 ---
 
 ## 🔒 Projects (pinned)

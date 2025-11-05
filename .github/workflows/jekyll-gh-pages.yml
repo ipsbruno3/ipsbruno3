@@ -8,7 +8,7 @@ on:
     - cron: "23 3 * * *"  # diário (UTC)
 
 permissions:
-  contents: write   # commit dos JSONs (opcional; aqui não commitamos, só publicamos artifact)
+  contents: write
   pages: write
   id-token: write
 
@@ -31,8 +31,9 @@ jobs:
         run: |
           sudo apt-get update -y
           sudo apt-get install -y jq
-          echo "$GH_TOKEN" | gh auth login --with-token
-          gh auth status
+          gh --version
+          # sem 'gh auth login'; o gh já usa GH_TOKEN do ambiente
+          gh auth status || true
 
       - name: Compute metrics -> docs/*.json
         shell: bash
@@ -40,7 +41,6 @@ jobs:
           set -euo pipefail
           mkdir -p docs tmp
 
-          # Coleta todos repos "owner" de cada usuário/org (REST + paginação)
           > tmp/repos.jsonl
           fetch() {
             local o="$1" page=1
@@ -55,7 +55,6 @@ jobs:
           }
           for o in $OWNERS; do fetch "$o" >> tmp/repos.jsonl; done
 
-          # Somatórios (ignora forks para não inflar contagem herdada)
           total_stars=$(jq -s '[.[] | select(.fork==false) | .stargazers_count] | add // 0' tmp/repos.jsonl)
           total_forks=$(jq -s '[.[] | select(.fork==false) | .forks_count]     | add // 0' tmp/repos.jsonl)
 
@@ -67,7 +66,6 @@ jobs:
             schemaVersion: 1, label: "forks (multi)", message: $msg, color: "informational"
           }' > docs/forks.json
 
-          # Top language agregada por bytes (também ignorando forks)
           declare -A bytes
           while IFS= read -r line; do
             repo=$(echo "$line" | jq -r '.full_name')

@@ -47,6 +47,7 @@ Pastebin: ipsBruno | Drakins
 | **facebook-enumerate-accounts** | [GitHub](https://github.com/ipsBruno/facebook-enumerate-accounts) | ⭐ 5 | Enumeração de contas FB via e-mail/telefone (OSINT). |
 ---
 
-## 📫 Contact
-bsbruno@pm.me • [GitHub](https://github.com/ipsbruno) • [Pastebin](https://pastebin.com/u/ipsbruno)
+
+
+
 

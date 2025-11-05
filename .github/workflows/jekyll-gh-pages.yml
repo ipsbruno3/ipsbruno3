@@ -1,0 +1,110 @@
+name: Build metrics & deploy Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+  schedule:
+    - cron: "23 3 * * *"  # diário (UTC)
+
+permissions:
+  contents: write   # commit dos JSONs (opcional; aqui não commitamos, só publicamos artifact)
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+env:
+  OWNERS: "ipsbruno ipsbruno3 ipsbrunoreserva"
+  GH_TOKEN: ${{ github.token }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deps
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y jq
+          echo "$GH_TOKEN" | gh auth login --with-token
+          gh auth status
+
+      - name: Compute metrics -> docs/*.json
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p docs tmp
+
+          # Coleta todos repos "owner" de cada usuário/org (REST + paginação)
+          > tmp/repos.jsonl
+          fetch() {
+            local o="$1" page=1
+            while :; do
+              resp=$(gh api -H "Accept: application/vnd.github+json" \
+                     "/users/${o}/repos?per_page=100&page=${page}&type=owner")
+              cnt=$(echo "$resp" | jq 'length')
+              [[ "$cnt" -eq 0 ]] && break
+              echo "$resp" | jq -c '.[]'
+              page=$((page+1))
+            done
+          }
+          for o in $OWNERS; do fetch "$o" >> tmp/repos.jsonl; done
+
+          # Somatórios (ignora forks para não inflar contagem herdada)
+          total_stars=$(jq -s '[.[] | select(.fork==false) | .stargazers_count] | add // 0' tmp/repos.jsonl)
+          total_forks=$(jq -s '[.[] | select(.fork==false) | .forks_count]     | add // 0' tmp/repos.jsonl)
+
+          jq -n --arg msg "$total_stars" '{
+            schemaVersion: 1, label: "stars (multi)", message: $msg, color: "blue"
+          }' > docs/stars.json
+
+          jq -n --arg msg "$total_forks" '{
+            schemaVersion: 1, label: "forks (multi)", message: $msg, color: "informational"
+          }' > docs/forks.json
+
+          # Top language agregada por bytes (também ignorando forks)
+          declare -A bytes
+          while IFS= read -r line; do
+            repo=$(echo "$line" | jq -r '.full_name')
+            is_fork=$(echo "$line" | jq -r '.fork')
+            [[ "$is_fork" == "true" ]] && continue
+            gh api "/repos/${repo}/languages" \
+              | jq -r 'to_entries[] | "\(.key)\t\(.value)"' \
+              | while IFS=$'\t' read -r lang val; do
+                  bytes["$lang"]=$(( ${bytes["$lang"]:-0} + val ))
+                done
+          done < tmp/repos.jsonl
+
+          top="None"; max=0
+          for k in "${!bytes[@]}"; do
+            v=${bytes[$k]}
+            if (( v > max )); then max=$v; top=$k; fi
+          done
+
+          jq -n --arg msg "$top" '{
+            schemaVersion: 1, label: "top lang (multi)", message: $msg, color: "success"
+          }' > docs/toplang.json
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact (docs/)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

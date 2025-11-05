@@ -31,7 +31,7 @@ Pastebin: ipsBruno | Drakins
 ---
 
 ## 🔒 Projects (pinned)
-| Projeto | Link | ⭐ / 👁 | Descrição |
+| Projeto | Link | ⭐  | Descrição |
 |--------|------|---------|-----------|
 | **Poloniex Trade Bot** | [GitHub](https://github.com/ipsBruno/poloniex-trade-bot) | ⭐ 67 | Bot de trading com RSI, SMA, MACD, full automação cripto. |
 | **bitcoin_cracking** | [GitHub](https://github.com/ipsbrunoreserva/bitcoin_cracking) | ⭐ 23 | Recupera seeds BIP39 com GPU (OpenCL, SHA-512 otimizado). |

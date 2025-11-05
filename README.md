@@ -57,6 +57,8 @@ Pastebin: [ipsBruno](https://pastebin.com/u/ipsBruno) | [Drakins](https://pasteb
 - **Security Engineer — Access Security Lab**  
   Performed high-impact penetration testing, code audits, reverse engineering, and forensic analysis for enterprise clients and financial institutions. Conducted red team exercises for **Big Tech partners** under strict NDA frameworks.  
 
+- **SA:MP Community** The most [recognized Brazilian](https://gist.github.com/pedropapa/90de1dfdf53fbbdf514c45cfc140a9ad) programmer in the SA:MP community, with hundreds of C and Pawn projects available on the Internet.The most recognized Brazilian programmer in the SA:MP community, with hundreds of C and Pawn projects available on the Internet. 
+
 - **Independent Consultant — Cybersecurity**  
   Delivered global consulting projects focused on **offensive security**, blockchain auditing, and privacy compliance. Maintains a **100% success rate** in vulnerability reporting, smart contract audits, and system hardening for startups and corporate clients.  
 

@@ -59,11 +59,11 @@ jobs:
           total_forks=$(jq -s '[.[] | select(.fork==false) | .forks_count]     | add // 0' tmp/repos.jsonl)
 
           jq -n --arg msg "$total_stars" '{
-            schemaVersion: 1, label: "stars (multi)", message: $msg, color: "blue"
+            schemaVersion: 1, label: "stars (multi)", message: $msg, color: "orange"
           }' > docs/stars.json
 
           jq -n --arg msg "$total_forks" '{
-            schemaVersion: 1, label: "forks (multi)", message: $msg, color: "informational"
+            schemaVersion: 1, label: "forks (multi)", message: $msg, color: "green"
           }' > docs/forks.json
 
           declare -A bytes

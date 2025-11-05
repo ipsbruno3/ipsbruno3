@@ -1,0 +1,52 @@
+name: multi-metrics
+on:
+  schedule:
+    - cron: "23 3 * * *"  
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   
+    env:
+      USERS: "ipsbruno ipsbruno3 ipsbrunoreserva"   
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ensure deps
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y jq
+
+      - name: Compute totals
+        shell: bash
+        run: |
+          total_stars=0
+          total_forks=0
+
+          for u in $USERS; do
+            s=$(gh repo list "$u" --source --limit 200 --json stargazerCount | jq '[.[].stargazerCount] | add // 0')
+            f=$(gh repo list "$u" --source --limit 200 --json forksCount     | jq '[.[].forksCount]     | add // 0')
+            total_stars=$(( total_stars + s ))
+            total_forks=$(( total_forks + f ))
+          done
+
+          mkdir -p docs
+
+          # Shields /endpoint payloads
+          jq -n --arg msg "$total_stars" '{
+            schemaVersion: 1, label: "stars (multi)", message: $msg, color: "blue"
+          }' > docs/stars.json
+
+          jq -n --arg msg "$total_forks" '{
+            schemaVersion: 1, label: "forks (multi)", message: $msg, color: "informational"
+          }' > docs/forks.json
+
+      - name: Commit JSONs
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/*.json
+          git commit -m "update badges json" || echo "no changes"
+          git push

@@ -1,72 +1,41 @@
-# ![Avatar](https://avatars.githubusercontent.com/u/226669626?v=4)  
-# **ipsbruno**  
-### *Hacker | Cryptanalysis | GPU High-Performance Computing | Infrastructure Automation*
+# ![avatar](https://avatars.githubusercontent.com/u/226669626?v=4) **ipsbruno**
+**Hacker · Cryptanalysis · GPU HPC · Infrastructure Automation**
 
-Security-focused full-stack developer and cryptographic researcher who builds production-grade, GPU-accelerated systems for high-performance cryptography. Deep expertise in offensive and defensive security, Vue.js front-end engineering, relational and NoSQL databases, graph databases, and blockchain systems — with a track record of optimizing low-level crypto kernels, architecting distributed pipelines, and hardening platforms against real-world attacks.  
-I turn complex security and performance problems into reliable, deployable products that scale.
+**I build GPU-powered crypto tooling and secure distributed infra.**  
+**→ 80M checks/s (Electrum), clusters 12×5090, OpenCL kernels — production-ready.**  
+*Offensive security research — legal use only.*  
 
----
-
-### 🌐 Social & Links
-[GitHub @ipsbruno](https://github.com/ipsbruno) •  
-[GitHub @ipsbruno3](https://github.com/ipsbruno3) •  
-[GitHub @ipsbrunoreserva](https://github.com/ipsbrunoreserva) •  
-[Pastebin @ipsbruno](https://pastebin.com/u/ipsbruno) •  
-[Pastebin @drakins](https://pastebin.com/u/drakins) •  
-[OpenBugBounty](https://www.openbugbounty.org/researchers/ipsbruno)
+[🔭 Demo](#) • [📂 Projects](#projects) • [✉️ Contact](mailto:bsbruno@pm.me)
 
 ---
 
-## 🔒 Hacking & Penetration Testing
-
-### **bitcoin_cracking**
-GPU BIP39 Recovery Tool utilizing OpenCL optimized PBKDF2 HMAC SHA-512 / SHA-256  
-**Tags:** `C` `bip39` `bitcoin` `cracking` `hacking` `mnemonic`  
-⭐ 25  💬 16  by [@ipsbrunoreserva](https://github.com/ipsbrunoreserva)
+### ⚡ Highlights
+- **GPU cryptanalysis** — OpenCL optimized kernels (wNAF 8-bit), 80M seeds/s per GPU (Electrum workflows).  
+- **Founder, UpCâmbio** — Exchange Crypto BRL
+- **CTO cBRL** — Blockchain Solidity Especialist
 
 ---
 
-### **brute-force-seed-bitcoin**
-Find used seeds in blockchain.  
-**Tags:** `JavaScript` `attack` `bitcoin` `blockchain` `brute-force`  
-⭐ 16  💬 13  by [@ipsbruno](https://github.com/ipsbruno)
+### 🧰 Tech & Metrics
+![Stars](https://img.shields.io/github/stars/ipsbruno?style=flat) ![TopLang](https://img.shields.io/github/languages/top/ipsbruno?style=flat) ![GPUs](https://img.shields.io/badge/GPU-5090-brightgreen)
 
 ---
 
-### **gartic-auto-drawer-bot**
-Auto drawing bot for gartic.com.br.  
-**Tags:** `Python` `automation` `bot`  
-⭐ 13  💬 19  by [@ipsbruno](https://github.com/ipsbruno)
-
+## 🔒 Projects (pinned)
+| Projeto | Link | ⭐ / 👁 | Descrição |
+|--------|------|---------|-----------|
+| **Poloniex Trade Bot** | [GitHub](https://github.com/ipsBruno/poloniex-trade-bot) | ⭐ 67 | Bot de trading com RSI, SMA, MACD, full automação cripto. |
+| **bitcoin_cracking** | [GitHub](https://github.com/ipsbrunoreserva/bitcoin_cracking) | ⭐ 23 | Recupera seeds BIP39 com GPU (OpenCL, SHA-512 otimizado). |
+| **brute-force-seed-bitcoin** | [GitHub](https://github.com/ipsBruno/brute-force-seed-bitcoin) | ⭐ 16 | Brute-force de seeds válidas usadas no blockchain. |
+| **bitcoin-cracking-opencl** | [GitHub](https://github.com/ipsbrunoreserva/bitcoin-cracking-opencl) | ⭐ 2 | Cracking massivo de chaves privadas BTC via OpenCL. |
+| **secp256k1-gpu-accelerator** | [GitHub](https://github.com/ipsbruno3/secp256k1-gpu-accelerator) | ⭐ 1 | Acelerador ECDSA GPU para curva secp256k1 (1bi ops/s). |
+| **gartic-auto-drawer-bot** | [GitHub](https://github.com/ipsBruno/gartic-auto-drawer-bot) | ⭐ 13 | Bot que desenha sozinho no Gartic via automação gráfica. |
+| **scanner-s3-buckets** | [GitHub](https://github.com/ipsBruno/scanner-s3-buckets) | ⭐ 18 | Scanner de buckets S3 públicos ou mal configurados. |
+| **gwm-haval-multimidia-native** | [GitHub](https://github.com/ipsBruno/gwm-haval-multimidia-native) | ⭐ 7 | Dump e análise do sistema multimídia do Haval H6 GT. |
+| **CVE-2022-40140-SCANNER** | [GitHub](https://github.com/ipsBruno/CVE-2022-40140-SCANNER) | ⭐ 2 | Scanner Shodan para servidores com CVE-2022-40140. |
+| **facebook-enumerate-accounts** | [GitHub](https://github.com/ipsBruno/facebook-enumerate-accounts) | ⭐ 5 | Enumeração de contas FB via e-mail/telefone (OSINT). |
 ---
 
-### **gwm-haval-multimidia-native**
-A collection of datasets from Haval H6 GT (Native).  
-**Tags:** `carplay-reverse` `challenge` `hacking` `reverse-engineering`  
-⭐ 7  💬 1  by [@ipsbruno](https://github.com/ipsbruno)
-
----
-
-### **CVE-2021-34473-NMAP-SCANNER**
-Massive scanner for CVE-2021-34473 (Microsoft Exchange Windows vulnerability).  
-**Tags:** `Lua` `scanner` `exploit`  
-⭐ 2  💬 1  by [@ipsbruno](https://github.com/ipsbruno)
-
----
-
-### **poloniex-trade-bot**
-Polobiex Trading BOT RSI/SMA/MACD  
-**Tags:** `AI` `trading` `crypto`  
-⭐ 57  💬 0  by [@ipsbruno](https://github.com/ipsbruno)
-
----
-
-## 🧠 About
-
-Founder of **UpCâmbio** and former **CTO of cBRL**, specialist in offensive information security, cryptanalysis, and high-performance automation.  
-Focused on **Bitcoin security research** and **large-scale GPU infrastructure**, combining innovation, blockchain, and advanced technology to build secure and efficient systems.
-
----
-
-📫 **Contact:** [bsbruno@pm.me](mailto:bsbruno@pm.me)  
+## 📫 Contact
+bsbruno@pm.me • [GitHub](https://github.com/ipsbruno) • [Pastebin](https://pastebin.com/u/ipsbruno)
 

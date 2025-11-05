@@ -28,6 +28,8 @@ Pastebin: ipsBruno | Drakins
 ### 🧰 Tech & Metrics
 ![Stars](https://img.shields.io/endpoint?url=https://ipsbruno3.github.io/ipsbruno3/stars.json)  ![Forks](https://img.shields.io/endpoint?url=https://ipsbruno3.github.io/ipsbruno3/forks.json)
 
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ipsbrunoreserva&layout=compact&theme=tokyonight&hide_border=true" />
+
 ---
 
 ## 🔒 Projects (pinned)

@@ -26,7 +26,7 @@ Pastebin: ipsBruno | Drakins
 ---
 
 ### 🧰 Tech & Metrics
-![Stars](https://img.shields.io/endpoint?url=https://ipsbruno3.github.io/ipsbruno3/stars.json) ![Forks](ttps://img.shields.io/endpoint?url=https://ipsbruno3.github.io/ipsbruno3/forks.json)
+![Stars](https://img.shields.io/endpoint?url=https://ipsbruno3.github.io/ipsbruno3/stars.json)  ![Forks](https://img.shields.io/endpoint?url=https://ipsbruno3.github.io/ipsbruno3/forks.json)
 
 ---
 

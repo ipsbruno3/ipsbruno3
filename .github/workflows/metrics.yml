@@ -1,40 +1,44 @@
 name: multi-metrics
 on:
   schedule:
-    - cron: "23 3 * * *"  
+    - cron: "23 3 * * *"   # roda 1x/dia (UTC). ajuste se quiser
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   
+      contents: write       # para commitar JSONs no repo
     env:
-      USERS: "ipsbruno ipsbruno3 ipsbrunoreserva"   
+      OWNERS: "ipsbruno ipsbruno3 ipsbrunoreserva"   # <<< SOMA desses usuários/orgs
+      GH_TOKEN: ${{ github.token }}                  # gh usa esse token
     steps:
       - uses: actions/checkout@v4
 
-      - name: Ensure deps
+      - name: Setup deps
         run: |
           sudo apt-get update -y
           sudo apt-get install -y jq
+          gh --version
 
-      - name: Compute totals
+      - name: Compute totals (stars + forks)
         shell: bash
         run: |
           total_stars=0
           total_forks=0
-
-          for u in $USERS; do
-            s=$(gh repo list "$u" --source --limit 200 --json stargazerCount | jq '[.[].stargazerCount] | add // 0')
-            f=$(gh repo list "$u" --source --limit 200 --json forksCount     | jq '[.[].forksCount]     | add // 0')
-            total_stars=$(( total_stars + s ))
-            total_forks=$(( total_forks + f ))
+          for o in $OWNERS; do
+            # Somatório de todas as repos originais do dono (sem forks)
+            mapfile -t repos < <(gh repo list "$o" --limit 200 --json nameWithOwner,fork \
+                                 --jq '.[] | select(.fork==false) | .nameWithOwner')
+            for r in "${repos[@]}"; do
+              s=$(gh repo view "$r" --json stargazerCount --jq .stargazerCount)
+              f=$(gh repo view "$r" --json forksCount     --jq .forksCount)
+              total_stars=$((total_stars + s))
+              total_forks=$((total_forks + f))
+            done
           done
 
           mkdir -p docs
-
-          # Shields /endpoint payloads
           jq -n --arg msg "$total_stars" '{
             schemaVersion: 1, label: "stars (multi)", message: $msg, color: "blue"
           }' > docs/stars.json
@@ -43,10 +47,34 @@ jobs:
             schemaVersion: 1, label: "forks (multi)", message: $msg, color: "informational"
           }' > docs/forks.json
 
+      - name: Compute top language (aggregate)
+        shell: bash
+        run: |
+          declare -A bytes
+          for o in $OWNERS; do
+            mapfile -t repos < <(gh repo list "$o" --limit 200 --json nameWithOwner,fork \
+                                 --jq '.[] | select(.fork==false) | .nameWithOwner')
+            for r in "${repos[@]}"; do
+              gh api "repos/${r}/languages" \
+                | jq -r 'to_entries[] | "\(.key)\t\(.value)"' \
+                | while IFS=$'\t' read -r lang val; do
+                    bytes["$lang"]=$(( ${bytes["$lang"]:-0} + val ))
+                  done
+            done
+          done
+          top="None"; max=0
+          for k in "${!bytes[@]}"; do
+            v=${bytes[$k]}
+            if (( v > max )); then max=$v; top=$k; fi
+          done
+          jq -n --arg msg "$top" '{
+            schemaVersion: 1, label: "top lang (multi)", message: $msg, color: "success"
+          }' > docs/toplang.json
+
       - name: Commit JSONs
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/*.json
-          git commit -m "update badges json" || echo "no changes"
+          git commit -m "update metrics JSON" || echo "no changes"
           git push

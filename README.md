@@ -1,18 +1,27 @@
-# ![avatar](https://avatars.githubusercontent.com/u/226669626?v=4) **ipsbruno**
-**Hacker · Cryptanalysis · GPU HPC · Infrastructure Automation**
 
-**I build GPU-powered crypto tooling and secure distributed infra.**  
-**→ 80M checks/s (Electrum), clusters 12×5090, OpenCL kernels — production-ready.**  
-*Offensive security research — legal use only.*  
+<img width="817" height="305" alt="image" src="https://github.com/user-attachments/assets/dd01632e-034e-4ce2-a851-e276f661b9e1" />
 
-[🔭 Demo](#) • [📂 Projects](#projects) • [✉️ Contact](mailto:bsbruno@pm.me)
+🧬 Bruno da Silva — Security Researcher | Blockchain & Cryptography
+
+📧 bsbruno@proton.me
+
+📱 +55 11 99740‑2197
+
+GitHub: ipsbruno | ipsbrunoreserva | ipsbruno3
+
+Pastebin: ipsBruno | Drakins
+
+
 
 ---
 
+
 ### ⚡ Highlights
-- **GPU cryptanalysis** — OpenCL optimized kernels (wNAF 8-bit), 80M seeds/s per GPU (Electrum workflows).  
-- **Founder, UpCâmbio** — Exchange Crypto BRL
-- **CTO cBRL** — Blockchain Solidity Especialist
+- **GPU Cryptanalysis** — OpenCL kernels with 8-bit wNAF windows; achieving up to **80M seeds/s per GPU** (Electrum/BIP39 pipelines).  
+- **Founder, UpCâmbio** — pioneer in digital currency exchange and crypto-BRL integration focused on automation and security.  
+- **CTO, cBRL** — **Blockchain & Solidity specialist**, leading tokenization and scalable DeFi infrastructure.  
+- **Offensive Security Researcher** — ethical exploitation, code auditing, and reverse engineering for blockchain and systems security.  
+- **Distributed GPU Infrastructure** — orchestrating Vast.ai clusters with automated monitoring and high-performance cryptographic pipelines. 
 
 ---
 

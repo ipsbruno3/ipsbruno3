@@ -1,7 +1,7 @@
 
 <img width="817" height="305" alt="image" src="https://github.com/user-attachments/assets/dd01632e-034e-4ce2-a851-e276f661b9e1" />
 
-🧬 Bruno da Silva — Security Researcher | Blockchain & Cryptography
+🧬 Bruno da Silva — Ofensive Security Researcher | Blockchain & Cryptography | Performance
 
 📧 bsbruno@proton.me
 

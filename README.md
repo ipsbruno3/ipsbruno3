@@ -12,13 +12,13 @@ Pastebin: [ipsBruno](https://pastebin.com/u/ipsBruno) | [Drakins](https://pasteb
 
 ### ⚡ Highlights
 
-- **Information Security & Offensive Research** — Specialist in ethical hacking, red teaming, and exploit development. Experienced in identifying, weaponizing, and mitigating vulnerabilities across cloud, web, blockchain, and distributed systems. Proven track record auditing **Big Tech and fintech infrastructures** under responsible disclosure and non-disclosure agreements (NDAs).  
-- **Blockchain & Cryptographic Engineering** — In-depth expertise in ECDSA, secp256k1, and BIP32/BIP39 standards. Builds optimized cryptographic and blockchain pipelines, exploring secure implementations and performance evaluation under ethical and academic contexts.  
-- **AI-Driven Cybersecurity** — Uses artificial intelligence for threat detection, behavioral pattern analysis, and automatic defense mechanisms. Designs adaptive systems capable of self-learning from threat signatures to enhance resilience.  
-- **Founder, UpCâmbio** — Created one of Brazil’s largest crypto-BRL exchanges, focusing on secure automation, regulatory compliance, and large-scale crypto infrastructure.  
-- **CTO, cBRL** — Designed and deployed a blockchain-based stablecoin ecosystem with full smart contract auditing, automated liquidity control, and continuous compliance validation.  
-- **Distributed Security Infrastructure** — Architected and operated GPU and cloud clusters for vulnerability research, data correlation, and cryptographic performance benchmarking.  
-- **Responsible Disclosure & NDA Compliance** — Adheres strictly to responsible disclosure protocols and **non-disclosure agreements**, ensuring client and organizational confidentiality in all penetration tests and security assessments.  
+* **Segurança da Informação & Pesquisa Ofensiva** — Especialista em hacking ético, red teaming e desenvolvimento de exploits. Experiência em identificar, explorar e mitigar vulnerabilidades em ambientes de nuvem, web, blockchain e sistemas distribuídos. Histórico comprovado auditando **infraestruturas de Big Tech e fintechs** sob protocolos de divulgação responsável e acordos de confidencialidade (NDAs).
+* **Engenharia de Blockchain & Criptografia** — Sólida experiência em ECDSA, secp256k1 e padrões BIP32/BIP39. Desenvolve pipelines criptográficos e de blockchain otimizados, explorando implementações seguras e avaliação de desempenho em contextos éticos e acadêmicos.
+* **Cibersegurança Orientada por IA** — Utiliza inteligência artificial para detecção de ameaças, análise de padrões de comportamento e mecanismos automáticos de defesa. Projeta sistemas adaptativos capazes de aprender continuamente a partir de assinaturas de ameaças para aumentar a resiliência.
+* **Fundador, UpCâmbio** — Criou uma das maiores exchanges de cripto-BRL do Brasil, com foco em automação segura, conformidade regulatória e infraestrutura cripto em larga escala.
+* **CTO, cBRL** — Projetou e implantou um ecossistema de stablecoin em blockchain com auditoria completa de smart contracts, controle automatizado de liquidez e validação contínua de conformidade.
+* **Infraestrutura de Segurança Distribuída** — Arquitetou e operou clusters de GPU e nuvem para pesquisa de vulnerabilidades, correlação de dados e benchmarking de desempenho criptográfico.
+* **Divulgação Responsável & Conformidade com NDAs** — Segue rigorosamente protocolos de divulgação responsável e **acordos de confidencialidade (NDAs)**, garantindo sigilo total de clientes e organizações em todos os testes de penetração e avaliações de segurança.
 
 ---
 

@@ -48,19 +48,23 @@ Pastebin: [ipsBruno](https://pastebin.com/u/ipsBruno) | [Drakins](https://pasteb
 
 ## 🧭 Career
 
-- **Founder — UpCâmbio**  
-  Built one of Brazil’s largest crypto-BRL exchanges, leading in trade volume and automation. Designed secure APIs, transaction engines, and high-availability infrastructure integrating traditional and digital finance.  
+- **Fundador — UpCâmbio**
 
-- **CTO — cBRL**  
-  Architected and deployed Brazil’s first fully audited **stablecoin infrastructure**, integrating compliance, liquidity automation, and multi-layer cryptographic verification.  
+Construiu uma das maiores exchanges de criptomoedas BRL do Brasil, líder em volume de negociação e automação. Projetou APIs seguras, mecanismos de transação e infraestrutura de alta disponibilidade, integrando finanças tradicionais e digitais.
 
-- **Security Engineer — Access Security Lab**  
-  Performed high-impact penetration testing, code audits, reverse engineering, and forensic analysis for enterprise clients and financial institutions. Conducted red team exercises for **Big Tech partners** under strict NDA frameworks.  
+- **CTO — cBRL**
 
-- **SA:MP Community** The most [recognized Brazilian](https://gist.github.com/pedropapa/90de1dfdf53fbbdf514c45cfc140a9ad) programmer in the SA:MP community, with hundreds open source codes in C and Pawn projects available on the Internet.
+Arquitetou e implementou a primeira **infraestrutura de stablecoin** totalmente auditada do Brasil, integrando conformidade, automação de liquidez e verificação criptográfica multicamadas.
 
-- **Independent Consultant — Cybersecurity**  
-  Delivered global consulting projects focused on **offensive security**, blockchain auditing, and privacy compliance. Maintains a **100% success rate** in vulnerability reporting, smart contract audits, and system hardening for startups and corporate clients.  
+- **Engenheiro de Segurança — Access Security Lab**
+
+Realizou testes de penetração de alto impacto, auditorias de código, engenharia reversa e análise forense para clientes corporativos e instituições financeiras. Conduziu exercícios de Red Team para **grandes parceiros de tecnologia** sob rigorosos acordos de confidencialidade.
+
+- **Comunidade SA:MP** O programador brasileiro mais reconhecido na comunidade SA:MP, com centenas de projetos de código aberto em C e Pawn disponíveis na internet.
+
+- **Consultor Independente — Segurança Cibernética**
+
+Realizou projetos de consultoria globais focados em segurança ofensiva, auditoria de blockchain e conformidade com a privacidade. Mantém uma taxa de sucesso de 100% em relatórios de vulnerabilidades, auditorias de contratos inteligentes e fortalecimento de sistemas para startups e clientes corporativos.
 
 ---
 

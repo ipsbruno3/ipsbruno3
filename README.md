@@ -1,12 +1,27 @@
+
 <img width="817" height="305" alt="banner" src="https://github.com/user-attachments/assets/dd01632e-034e-4ce2-a851-e276f661b9e1" />
 
 🧬 **Bruno da Silva — Offensive Security Researcher | Blockchain & Cryptography | Information Security & AI**
+
+
+
+
 
 📧 bsbruno@proton.me  
 📱 +55 11 99740-2197  
 
 GitHub: [ipsbruno](https://github.com/ipsbruno) | [ipsbrunoreserva](https://github.com/ipsbrunoreserva) | [ipsbruno3](https://github.com/ipsbruno3)  
 Pastebin: [ipsBruno](https://pastebin.com/u/ipsBruno) | [Drakins](https://pastebin.com/u/drakins)
+
+
+---
+
+
+<p align="left">
+  <img src="https://img.shields.io/endpoint?url=https://ipsbruno3.github.io/ipsbruno3/stars.json&style=for-the-badge&labelColor=0D1117&color=FBBF24&label=%E2%AD%90%20Stars&cacheSeconds=3600" />
+  <img src="https://img.shields.io/endpoint?url=https://ipsbruno3.github.io/ipsbruno3/forks.json&style=for-the-badge&labelColor=0D1117&color=FBBF24&label=%F0%9F%8D%B4%20Forks&cacheSeconds=3600" />
+  <img src="https://img.shields.io/endpoint?url=https://ipsbruno3.github.io/ipsbruno3/commits.json&style=for-the-badge&labelColor=0D1117&color=FBBF24&label=%F0%9F%A7%B1%20Commits&cacheSeconds=3600" />
+</p>
 
 ---
 
@@ -20,18 +35,25 @@ Pastebin: [ipsBruno](https://pastebin.com/u/ipsBruno) | [Drakins](https://pasteb
 * **Infraestrutura de Segurança Distribuída** — Arquitetou e operou clusters de GPU e nuvem para pesquisa de vulnerabilidades, correlação de dados e benchmarking de desempenho criptográfico.
 * **Divulgação Responsável & Conformidade com NDAs** — Segue rigorosamente protocolos de divulgação responsável e **acordos de confidencialidade (NDAs)**, garantindo sigilo total de clientes e organizações em todos os testes de penetração e avaliações de segurança.
 
----
-
-### 🧰 Tech & Metrics
-
-![Stars](https://img.shields.io/endpoint?url=https://ipsbruno3.github.io/ipsbruno3/stars.json)  
-![Forks](https://img.shields.io/endpoint?url=https://ipsbruno3.github.io/ipsbruno3/forks.json)
-
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ipsbrunoreserva&layout=compact&theme=tokyonight&hide_border=true" />
 
 ---
 
 ## 🔒 Featured Projects
+![Kali](https://img.shields.io/badge/Kali%20Linux-557C94.svg?style=flat&logo=Kali-Linux&logoColor=white)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white)
+![Vue.JS](https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=vue.js&logoColor=white)
+![MySql](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![Node.Js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=flat&logo=javascript&logoColor=F7DF1E)
+![Bitcoin](https://img.shields.io/badge/Bitcoin-F7931A.svg?style=flat&logo=Bitcoin&logoColor=white)
+
+![Hacking](https://img.shields.io/badge/Open%20Source%20Hardware-0099B0.svg?style=flat&logo=Open-Source-Hardware&logoColor=white)
+![GPU](https://img.shields.io/badge/NVIDIA-76B900.svg?style=flat&logo=NVIDIA&logoColor=white)
+![WebGPU](https://img.shields.io/badge/WebGL-990000.svg?style=flat&logo=WebGL&logoColor=white)
+![MicroPy](https://img.shields.io/badge/MicroPython-2B2728.svg?style=flat&logo=MicroPython&logoColor=white)
+![Solidity](https://img.shields.io/badge/Solidity-363636.svg?style=flat&logo=Solidity&logoColor=white)
+![Intel](https://img.shields.io/badge/Intel-0071C5.svg?style=flat&logo=Intel&logoColor=white)
 
 | Project | Link | ⭐ | Description |
 |----------|------|:--:|-------------|

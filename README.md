@@ -53,7 +53,7 @@ Pastebin: [ipsBruno](https://pastebin.com/u/ipsBruno) | [Drakins](https://pasteb
 ![WebGPU](https://img.shields.io/badge/WebGL-990000.svg?style=flat&logo=WebGL&logoColor=white)
 ![MicroPy](https://img.shields.io/badge/MicroPython-2B2728.svg?style=flat&logo=MicroPython&logoColor=white)
 ![Solidity](https://img.shields.io/badge/Solidity-363636.svg?style=flat&logo=Solidity&logoColor=white)
-![Intel](https://img.shields.io/badge/Intel-0071C5.svg?style=flat&logo=Intel&logoColor=white)
+![Intel](https://img.shields.io/badge/Intel-0071C5.svg?style=flat&logo=Intel&logoColor=white) ![Burp](https://img.shields.io/badge/Burp%20Suite-FF6633.svg?style=flat&logo=Burp-Suite&logoColor=white) ![Elastic](https://img.shields.io/badge/Elasticsearch-005571.svg?style=flat&logo=Elasticsearch&logoColor=white)
 
 | Project | Link | ⭐ | Description |
 |----------|------|:--:|-------------|

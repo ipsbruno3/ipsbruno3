@@ -54,49 +54,31 @@ jobs:
             done
           }
           for o in $OWNERS; do fetch "$o" >> tmp/repos.jsonl; done
-                    # ---------------------------------------------------------
-          # TOTAL COMMITS (somando contribuições dos 3 users nos repos)
-          # - conta commits por repo via /contributors
-          # - ignora repos que são fork
+               # ---------------------------------------------------------
+          # TOTAL COMMITS (3 perfis) via GraphQL contributionsCollection
+          # - mais confiável que /contributors
+          # - mede "commit contributions" no GitHub (tipo o do perfil)
           # ---------------------------------------------------------
           total_commits=0
+          from="2008-01-01T00:00:00Z"
+          to="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
 
-          while IFS= read -r line; do
-            repo=$(echo "$line" | jq -r '.full_name')
-            is_fork=$(echo "$line" | jq -r '.fork')
-            [[ "$is_fork" == "true" ]] && continue
+          for u in $OWNERS; do
+            c=$(gh api graphql \
+              -F login="$u" -F from="$from" -F to="$to" \
+              -f query='
+                query($login:String!, $from:DateTime!, $to:DateTime!) {
+                  user(login:$login) {
+                    contributionsCollection(from:$from, to:$to) {
+                      totalCommitContributions
+                    }
+                  }
+                }' \
+              --jq '.data.user.contributionsCollection.totalCommitContributions' 2>/dev/null || echo 0)
 
-            repo_commits=0
-
-            # vamos procurar os 3 usuários nas páginas de contributors
-            declare -A need
-            for u in $OWNERS; do need["$u"]=1; done
-            remaining=0; for _ in $OWNERS; do remaining=$((remaining+1)); done
-
-            page=1
-            while :; do
-              resp=$(gh api -H "Accept: application/vnd.github+json" \
-                    "/repos/${repo}/contributors?per_page=100&page=${page}&anon=1" 2>/dev/null || echo "[]")
-
-              cnt=$(echo "$resp" | jq 'length' 2>/dev/null || echo 0)
-              [[ "$cnt" -eq 0 ]] && break
-
-              for u in $OWNERS; do
-                [[ "${need[$u]:-0}" -eq 0 ]] && continue
-                v=$(echo "$resp" | jq -r --arg login "$u" '[.[] | select(.login==$login) | .contributions] | add // 0')
-                if [[ "$v" != "0" && "$v" != "null" ]]; then
-                  repo_commits=$((repo_commits + v))
-                  need["$u"]=0
-                  remaining=$((remaining-1))
-                fi
-              done
-
-              [[ "$remaining" -le 0 ]] && break
-              page=$((page+1))
-            done
-
-            total_commits=$((total_commits + repo_commits))
-          done < tmp/repos.jsonl
+            c=${c:-0}
+            total_commits=$((total_commits + c))
+          done
 
           jq -n --arg msg "$total_commits" '{
             schemaVersion: 1, label: "commits (multi)", message: $msg, color: "warning"

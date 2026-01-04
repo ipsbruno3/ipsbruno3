@@ -47,6 +47,7 @@ Pastebin: [ipsBruno](https://pastebin.com/u/ipsBruno) | [Drakins](https://pasteb
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=flat&logo=javascript&logoColor=F7DF1E)
 ![Bitcoin](https://img.shields.io/badge/Bitcoin-F7931A.svg?style=flat&logo=Bitcoin&logoColor=white)
+![Hack](https://img.shields.io/badge/Hackaday-1A1A1A.svg?style=flat&logo=Hackaday&logoColor=white)
 
 ![Hacking](https://img.shields.io/badge/Open%20Source%20Hardware-0099B0.svg?style=flat&logo=Open-Source-Hardware&logoColor=white)
 ![GPU](https://img.shields.io/badge/NVIDIA-76B900.svg?style=flat&logo=NVIDIA&logoColor=white)
